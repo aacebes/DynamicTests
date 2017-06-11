@@ -15,7 +15,7 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class RandomAnnotationParameterizedTesting {
+public class AnnotationParameterizedTesting {
 
 	// ----------- PARAMETERS INJECTION THROUGH ANNOTATION -----------
 	// When injecting with annotations, parameters must be public attributes
@@ -26,6 +26,7 @@ public class RandomAnnotationParameterizedTesting {
 	@Parameter(1) // Starting with second parameter, number is needed
 	public Integer secondNumber;
 
+	// Generation of above parameters is implemented with a @Parameters annotated method
 	@Parameters(name = "Test with {0} and {1}")
 	public static List<Integer[]> generator() {
 		final Random random = new Random();

@@ -26,6 +26,7 @@ public class ConstructorParameterizedTesting {
 		secondNumber = second;
 	}
 
+	// Generation of above parameters is implemented with a @Parameters annotated method
 	@Parameters(name = "Test with {0} and {1}")
 	public static List<Integer[]> generator() {
 		return Arrays.asList(new Integer[][] { { 0, 0 }, { 0, 2 }, { -2, 4 }, { 7, 4 }, { -4, -8 },

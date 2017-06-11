@@ -60,10 +60,10 @@ public class FactoriesTesting {
 		final List<String> stringsWithMyName = Arrays.asList("Alex", "I'm Alex", "Alex Acebes", "I'm Alex, hi!");
 
 		return stringsWithMyName.stream()
-				.map(string -> dynamicTest("\"" + string + "\" should contain \"" + myName + "\"", new Executable() {
+				.map(stringUnderTest -> dynamicTest("\"" + stringUnderTest + "\" should contain \"" + myName + "\"", new Executable() {
 					@Override
 					public void execute() throws Throwable {
-						assertThat(string.contains(myName), is(true));
+						assertThat(stringUnderTest.contains(myName), is(true));
 					}
 				}));
 	}
